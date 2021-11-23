@@ -1,0 +1,98 @@
+{
+    "userInfo": {
+        "id": 1,
+        "name": "Styrmir Óli Þorsteinsson",
+        "info": "These are some of the project that have been done by me. At the bottom of the project is a link.",
+        "socials": [
+            {
+                "name": "Email",
+                "link": "styrmir97@gmail.com",
+                "img": "/img/socials/email.png"
+            },
+            {
+                "name": "Github",
+                "link": "https://github.com/Stimmikex",
+                "img": "/img/socials/github.png"
+            },
+            {
+                "name": "Instagram",
+                "link": "https://www.instagram.com/stimmikex/",
+                "img": "/img/socials/instagram.png"
+            }
+        ],
+        "img": "/img/user/user.png"
+    },
+    "projects": [
+        {
+            "id": 1,
+            "name": "NordRedo",
+            "dec": "This project is a front and back end development for a event planer to connect companies and student groups togather.",
+            "img": "/img/projects/nordRedo.png",
+            "link": "https://nordredo-frontend.herokuapp.com/"
+        },
+        {
+            "id": 2,
+            "name": "Kverka",
+            "dec": "This a alternive version of the Utilif.is that was made with PHP laravel framework.",
+            "img": "/img/projects/kverka.png",
+            "link": "[Link]"
+        },
+        {
+            "id": 3,
+            "name": "RideAlong",
+            "dec": "This project was designed to allow users to ride share in Iceland and replace a old and outdated site.",
+            "img": "/img/projects/rideAlong.jpg",
+            "link": "[Link]"
+        },
+        {
+            "id": 4,
+            "name": "UST",
+            "dec": "Worked as a Ranger at the volcano where I did some grafics for the Enviremental Agancy of Iceland ",
+            "img": "/img/projects/UST.jpg",
+            "link": "[Link]"
+        },
+        {
+            "id": 5,
+            "name": "BuyMeTemp",
+            "dec": "Webpage template for basic information websites.",
+            "img": "/img/projects/Okumaelar.jpg",
+            "link": "[Link]"
+        }
+    ],
+    "Skills": {
+        "dev": [
+                {
+                    "id": 1,
+                    "name": "Front-end Development",
+                    "pro": 70
+                },
+                {
+                    "id": 2,
+                    "name": "Backend-end Development",
+                    "pro": 90
+                }
+        ],
+        "proleng": [
+            {
+                "id": 1,
+                "name": "Java",
+                "pro": 80
+            },
+            {
+                "id": 1,
+                "name": "JavaScript",
+                "pro": 80
+            },
+            {
+                "id": 1,
+                "name": "C#",
+                "pro": 60
+            },
+            {
+                "id": 1,
+                "name": "PHP",
+                "pro": 90
+            }
+        ]
+    }
+}
