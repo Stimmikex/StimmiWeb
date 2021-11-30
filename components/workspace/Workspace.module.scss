@@ -1,0 +1,8 @@
+.WorkspaceList {
+    display: flex;
+    .Workspace {
+        width: 33%;
+        height: 15em;
+        border: solid black 1px;
+    }
+}

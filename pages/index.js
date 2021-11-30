@@ -1,11 +1,13 @@
 import ProjectList from '../components/projects/ProjectList.js'
 import Cv from '../components/cv/Cv.js'
+import WorkspaceList from '../components/workspace/WorkspaceList.js'
 
-export default function Home({ projects, user, skills, learned }) {
+export default function Home({ projects, user, skills, learned, workspaces }) {
   return (
       <main>
         <Cv skills={skills} user={user} learned={learned} ></Cv>
         <ProjectList projects={projects} user={user}></ProjectList>
+        <WorkspaceList workspaces={workspaces}></WorkspaceList>
       </main>
   )
 }
@@ -19,12 +21,15 @@ export async function getServerSideProps() {
   const skills = getSkills.Skills;
   const getLearned = await require('./data/projects.json');
   const learned = getLearned.Learned;
+  const getWorkspaces = await require('./data/projects.json');
+  const workspaces = getWorkspaces.Workspaces;
   return {
     props: {
       projects,
       user,
       skills,
       learned,
+      workspaces,
     },
   }
 }

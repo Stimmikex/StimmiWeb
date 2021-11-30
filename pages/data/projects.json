@@ -108,5 +108,13 @@
             "length": "2018 - 2021",
             "img": "/img/learned/UoI.png"
         }
+    ],
+    "Workspaces": [
+        {
+            "id": 1,
+            "name": "Utilif",
+            "dec": "Skis finder and Skis poster maker",
+            "img": "[link]"
+        }
     ]
 }

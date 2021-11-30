@@ -1,5 +1,5 @@
 import cvStyles from "./Cv.module.scss"
-import ProgressBar from "../ProgressBar"
+import ProgressBar from "../utility/ProgressBar"
 import { server } from "../../pages/config/index.js"
 
 const Cv = ({ skills, user, learned }) => {
