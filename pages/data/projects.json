@@ -94,5 +94,19 @@
                 "pro": 90
             }
         ]
-    }
+    },
+    "Learned": [
+        {
+            "id": 1,
+            "name": "Technical School of Reykjavík",
+            "length": "2015 - 2017",
+            "img": "/img/learned/TSoR.jpg"
+        },
+        {
+            "id": 2,
+            "name": "University of Iceland",
+            "length": "2018 - 2021",
+            "img": "/img/learned/UoI.png"
+        }
+    ]
 }
