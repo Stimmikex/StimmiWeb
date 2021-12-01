@@ -1,8 +1,10 @@
 .WorkspaceList {
     display: flex;
     .Workspace {
-        width: 33%;
+        width: 30%;
         height: 15em;
         border: solid black 1px;
+        margin: 1em;
+        padding: 1em;
     }
 }

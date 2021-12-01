@@ -3,18 +3,25 @@ import WorkspaceStyle from './WorkSpace.module.scss';
 
 const WorkspaceList = ({ workspaces }) => {
     return (
-        <div className={WorkspaceStyle.WorkspaceList}>
+        <div>
             <p>WorkSpaces</p>
-            {workspaces.map((work) => {
-                return (
-                    <Link href='/workspace/[workName]' as={`/workspace/${work.name}`}>
-                        <div className={WorkspaceStyle.Workspace}>
-                            <p>{work.name}</p>
-                            <p>{work.dec}</p>
-                        </div>
-                    </Link>
-                )
-            })}
+            <div className={WorkspaceStyle.WorkspaceList}>
+                {workspaces.map((work) => {
+                    return (
+                        <Link href='/workspace/[workName]' as={`/workspace/${work.name}`}>
+                            <div className={WorkspaceStyle.Workspace}>
+                                <div>
+                                    
+                                </div>
+                                <div>
+                                    <p>{work.name}</p>
+                                    <p>{work.dec}</p>
+                                </div>
+                            </div>
+                        </Link>
+                    )
+                })}
+            </div>
         </div>
     )
 }
