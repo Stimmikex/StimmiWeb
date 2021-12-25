@@ -1,9 +1,19 @@
 import React from 'react'
-import {XYPlot, XAxis, YAxis, HorizontalGridLines, LineSeries} from 'react-vis';
+import { TimeSeries, Index, TimeRange } from "pondjs";
+import {
+    Resizable,
+    Charts,
+    ChartContainer,
+    ChartRow,
+    YAxis,
+    BarChart,
+    styler
+  } from "react-timeseries-charts";
+  import moment from 'moment';
 
 export default function Home({ gasData }) {
     let [gasType, setGasType] = React.useState('SO2 (ppm)')
-    let [search, setSearch] = React.useState([])
+    let [search, setSearch] = React.useState([gasData])
 
     const displayDay = async (e) => {
         const test = e.target.value;
@@ -37,11 +47,21 @@ export default function Home({ gasData }) {
         const test = e.target.value;
         setSearch(getDangerLevels(test, gasType))
     }
+    // const getDangerLevels = (dangerlevel, gas) => {
+    //     let days = [];
+    //     gasData.map((data) => {
+    //         // console.log(new Date(data.Time).getTime())
+    //         if (parseFloat(data[gas]) >= dangerlevel) {
+    //             days.push({time: data.Time, gas: parseFloat(data[gas])})
+    //         }
+    //     })
+    //     return days
+    // }
     const getDangerLevels = (dangerlevel, gas) => {
         let days = [];
         gasData.map((data) => {
             if (parseFloat(data[gas]) >= dangerlevel) {
-                days.push([data.Time, parseFloat(data[gas])])
+                days.push([new Date(data.Time).toLocaleString(), parseFloat(data[gas])])
             }
         })
         return days
@@ -53,32 +73,51 @@ export default function Home({ gasData }) {
         })
         return sumer
     }
-    const filterData = (wantedDate, data) => {
+    const data = {
+        name: "opportunities",
+        columns: [
+          "index",
+          "value"
+        ],
+        // points: [
+        //     search.map((gas) => {
+        //         gas.time, gas.gas
+        //     })
+        // ]
+        points: [
+            search.map((gas) => [
+                gas[0].Time,
+                gas[1]["SO2 (ppm)"]
+            ])
+        ]
+      }
+    
+    console.log(data)
+      
+    const series = new TimeSeries(data)
 
+    console.log(series)
+    
+    const startDate = moment.utc().subtract(1, 'week')
+    const endDate = moment.utc()
+    const timeRange = new TimeRange(parseInt(startDate.format('x'), 10), parseInt(endDate.format('x'), 10))
+    
+    const style = {
+        value: {
+            normal: {fill: "#A5C8E1"},
+            highlighted: {fill: "#bfdff6"},
+            selected: {fill: "#5aa2d5"},
+            muted: {fill: "#A5C8E1", opacity: 0.4}
+        }
     }
+    const max = 10
+    const maxTimeDate = new Date(moment.utc().add(1, 'day').format("MMM DD, YYYY HH:MM"))
+    const minTimeDate = new Date(moment.utc().subtract(1, 'year').format("MMM DD, YYYY HH:MM"))
+    const minDurationSeconds = 600
+    
     return (
         <main>
             <h1>GasReader</h1>
-            <div>
-                {gasData.map((data) => {
-                    <div>
-                        <p></p>
-                    </div>
-                })}
-                {/* <XYPlot
-                    width={300}
-                    height={300}>
-                    <HorizontalGridLines />
-                    <LineSeries
-                        data={[
-                            {x: 1, y: 10},
-                            {x: 2, y: 5},
-                            {x: 3, y: 15}
-                          ]}/>
-                    <XAxis />
-                    <YAxis />
-                </XYPlot> */}
-            </div>
             <div>
                 <p>Sum: {sumOfDate('SO2 (ppm)')}</p>
                 <div>
@@ -92,9 +131,33 @@ export default function Home({ gasData }) {
                     </select>
                     {/* <p>Input for date: <input type="Date" onChange={displayDay}></input></p> */}
                     <p>Input for gases: <input type="number" onChange={displayDangerLevels}></input></p>
+                    {/* <ChartContainer
+                        width={600}
+                        utc={false}
+                        timeRange={timeRange}
+                        format="day"
+                        enablePanZoom={true}
+                        maxTime={maxTimeDate}
+                        minTime={minTimeDate}
+                        minDuration={minDurationSeconds * 1000}>
+                        <ChartRow height="150">
+                            <YAxis
+                            id="tot"
+                            label="Level of Gases"
+                            min={0} max={max}
+                            width="60" />
+                            <Charts>
+                            <BarChart
+                                axis="tot"
+                                style={style}
+                                columns={["value"]}
+                                series={series}/>
+                            </Charts>
+                        </ChartRow>
+                    </ChartContainer> */}
                     {search.map((gas) => {
                         return (
-                            <p><b>{gas[0]}</b>: {gas[1]}</p>
+                            <p><b>{gas.time}</b>: {gas.gas}</p>
                         )
                     })}
                 </div>
