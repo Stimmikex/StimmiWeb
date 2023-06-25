@@ -3,7 +3,7 @@ import Styles from "./Styles.module.scss";
 
 const ProjectList = ({ projects, user }) => {
     return (
-        <div>
+        <div className={Styles.arbitor}>
             <div className={Styles.component}>
                 <div className={Styles.component__main}>
                     <div className={Styles.component__main__container}>

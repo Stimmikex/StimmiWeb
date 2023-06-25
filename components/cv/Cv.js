@@ -49,10 +49,11 @@ const Cv = ({ skills, user, learned }) => {
                 </div>
             </div>
             <div className={cvStyles.cv__footer}>
-                <div>
+                <div className={cvStyles.cv__footer__text}>
                     <h1>Where have I learned:</h1>
                     <p>Computer Science</p>
                 </div>
+                <div className={cvStyles.cv__footer__container}>
                 {learned.map((learn) => {
                     return (
                         <div className={cvStyles.cv__footer__learn}>
@@ -64,6 +65,7 @@ const Cv = ({ skills, user, learned }) => {
                         </div>
                     )
                 })}
+                </div>
             </div>
         </div>
     )

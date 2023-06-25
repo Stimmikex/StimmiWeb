@@ -4,7 +4,7 @@ import WorkspaceList from '../components/workspace/WorkspaceList.js'
 
 export default function Home({ projects, user, skills, learned, workspaces }) {
   return (
-      <main>
+      <main className='MainContainer'>
         <Cv skills={skills} user={user} learned={learned} ></Cv>
         <ProjectList projects={projects} user={user}></ProjectList>
         <WorkspaceList workspaces={workspaces}></WorkspaceList>
