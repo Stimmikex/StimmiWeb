@@ -25,7 +25,7 @@
     "projects": [
         {
             "id": 1,
-            "name": "NordRedo",
+            "name": "Nord",
             "dec": "This project is a front and back end development for a event planer to connect companies and student groups togather.",
             "img": "/img/projects/nordRedo.png",
             "link": "https://nord.is/"
@@ -107,6 +107,12 @@
             "name": "University of Iceland",
             "length": "2018 - 2021",
             "img": "/img/learned/UoI.png"
+        },
+        {
+            "id": 3,
+            "name": "ETH Zurich",
+            "length": "2023 - 2024",
+            "img": "/img/learned/ETHZ.png"
         }
     ],
     "Workspaces": [
