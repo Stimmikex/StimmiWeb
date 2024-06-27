@@ -1,5 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=REM:ital,wght@0,100..900;1,100..900&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
 .mainContainer {
     display: grid;
     grid-template-rows: auto;
     grid-auto-columns: 100%;
+    font-family: 'REM', serif
 }

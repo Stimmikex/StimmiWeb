@@ -24,7 +24,7 @@ const Cv = ({ skills, user, learned }) => {
                     <p>Hi</p>
                 </div>
                 <div className={cvStyles.cv__main__right}>
-                    <div className={cvStyles.cv__main__right__info}>
+                    {/* <div className={cvStyles.cv__main__right__info}>
                         <h2>Programming languages</h2>
                         {skills.proleng.map((proleng) => {
                             return (
@@ -45,7 +45,7 @@ const Cv = ({ skills, user, learned }) => {
                                 </div>
                             )
                         })}
-                    </div>
+                    </div> */}
                 </div>
             </div>
             <div className={cvStyles.cv__footer}>

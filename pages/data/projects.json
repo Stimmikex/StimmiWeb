@@ -22,6 +22,137 @@
         ],
         "img": "/img/user/user.png"
     },
+    "Workplaces": [
+        {
+            "name": "Skiing",
+            "cert": [
+                {
+                    "name": "Wilderness first responder",
+                    "icon": "[Link]",
+                    "logo": "/img/workplace/cert/WFR-Logo.png"
+                },
+                {
+                    "name": "Outdoor emergancy technision",
+                    "icon": "[Link]",
+                    "logo": "/img/workplace/cert/OEC-Logo.gif"
+                }
+            ],
+            "job": [
+                {
+                    "workplace": "Panorama Mountain Resort",
+                    "logo": "/img/workplace/Panorama-Logo.svg",
+                    "title": "Ski patrol",
+                    "year": "2018-2019",
+                    "description": "Add text",
+                    "Skills": [
+                        {
+                            "name": "Tobogan",
+                            "icon": "[Link]",
+                            "description": "Add text"
+                        }
+                    ]
+                },
+                {
+                    "workplace": "Skíðasvæðin",
+                    "logo": "/img/workplace/Skidasvaedin-Logo.png",
+                    "title": "Ski patrol",
+                    "year": "2021-2022",
+                    "description": "Add text",
+                    "Skills": [
+                        {
+                            "name": "Tobogan",
+                            "icon": "[Link]",
+                            "description": "Add text"
+                        }
+                    ]
+                },
+                {
+                    "workplace": "Skíðasvæðin",
+                    "logo": "/img/workplace/Skidasvaedin-Logo.png",
+                    "title": "Area Manager",
+                    "year": "2022-2023",
+                    "description": "Add text",
+                    "Skills": [
+                        {
+                            "name": "Welding",
+                            "icon": "[Link]",
+                            "description": "Add text"
+                        },
+                        {
+                            "name": "Management",
+                            "icon": "[Link]",
+                            "description": "Add text"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Hálendið",
+            "cert": [
+                {
+                    "name": "Wilderness first responder",
+                    "icon": "[Link]",
+                    "logo": "/img/workplace/cert/WFR-Logo.png"
+                },
+                {
+                    "name": "Outdoor emergancy technision",
+                    "icon": "[Link]",
+                    "logo": "/img/workplace/cert/OEC-Logo.gif"
+
+                }
+            ],
+            "job": [
+                {
+                    "workplace": "Panorama Mountain Resort",
+                    "logo": "/img/workplace/Panorama-Logo.svg",
+                    "title": "Ski patrol",
+                    "year": "2018-2019",
+                    "description": "Add text",
+                    "Skills": [
+                        {
+                            "name": "Tobogan",
+                            "icon": "[Link]",
+                            "description": "Add text"
+                        }
+                    ]
+                },
+                {
+                    "workplace": "Skíðasvæðin",
+                    "logo": "/img/workplace/Skidasvaedin-Logo.png",
+                    "title": "Ski patrol",
+                    "year": "2021-2022",
+                    "description": "Add text",
+                    "Skills": [
+                        {
+                            "name": "Tobogan",
+                            "icon": "[Link]",
+                            "description": "Add text"
+                        }
+                    ]
+                },
+                {
+                    "workplace": "Skíðasvæðin",
+                    "logo": "/img/workplace/Skidasvaedin-Logo.png",
+                    "title": "Area Manager",
+                    "year": "2022-2023",
+                    "description": "Add text",
+                    "Skills": [
+                        {
+                            "name": "Welding",
+                            "icon": "[Link]",
+                            "description": "Add text"
+                        },
+                        {
+                            "name": "Management",
+                            "icon": "[Link]",
+                            "description": "Add text"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
     "projects": [
         {
             "id": 1,
