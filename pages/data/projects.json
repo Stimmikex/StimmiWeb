@@ -22,6 +22,83 @@
         ],
         "img": "/img/user/user.png"
     },
+    "Learned": [
+        {
+            "id": 1,
+            "name": "Technical School of Reykjavík",
+            "length": "sept 2015 - june 2017",
+            "img": "/img/learned/TSoR.jpg",
+            "projects": [
+                {
+                    "name": "RideAlong"
+                }
+            ]
+            
+        },
+        {
+            "id": 2,
+            "name": "University of Iceland",
+            "length": "sept 2018 - june 2021",
+            "img": "/img/learned/UoI.png",
+            "student_groups": [
+                {
+                    "name": "Nord",
+                    "title": "lénsherra"
+                }
+            ],
+            "projects": [
+                {
+                    "name": "NordRedo"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "ETH Zurich",
+            "length": "sept 2023 - june 2024",
+            "img": "/img/learned/ETHZ.png",
+            "projects": [
+                {
+                    "name": "OffTheRoadtracker",
+                    "tags": [
+                        {
+                            "name": "Vue"
+                        }
+                    ]
+                },
+                {
+                    "name": "MixedAviation",
+                    "tags": [
+                        {
+                            "name": "Hololens 2"
+                        }
+                    ]
+                },
+                {
+                    "name": "HoloGuidance",
+                    "tags": [
+                        {
+                            "name": "Hololens 2"
+                        }
+                    ]
+                },
+                {
+                    "name": "Culinary Showdown",
+                    "tags": [
+                        {
+                            "name": "C#"
+                        },
+                        {
+                            "name": "MonoGame"
+                        },
+                        {
+                            "name": "VideoGame"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
     "Workplaces": [
         {
             "name": "Skiing",
@@ -46,6 +123,11 @@
                     "description": "Add text",
                     "Skills": [
                         {
+                            "name": "First aid",
+                            "icon": "[Link]",
+                            "description": "Developed a good foundation of first aid at Panorama with the course Outdoor Emergancy Care or OEC for short"
+                        },
+                        {
                             "name": "Tobogan",
                             "icon": "[Link]",
                             "description": "Add text"
@@ -59,6 +141,12 @@
                     "year": "2021-2022",
                     "description": "Add text",
                     "Skills": [
+                        {
+                            "name": "Lift Maintainance",
+                            "icon": "[Link]",
+                            "description": "Helping with the lift maintainance for the ski resort"
+
+                        },
                         {
                             "name": "Tobogan",
                             "icon": "[Link]",
@@ -104,39 +192,88 @@
             ],
             "job": [
                 {
-                    "workplace": "Panorama Mountain Resort",
+                    "workplace": "Ferðafélag Fljótdalshéraðs",
                     "logo": "/img/workplace/Panorama-Logo.svg",
-                    "title": "Ski patrol",
-                    "year": "2018-2019",
-                    "description": "Add text",
+                    "title": "Hut Warden/Glacier Guide",
+                    "year": "2018-2018",
+                    "description": "Spent the summer as a hut warden in Sigurðarskáli on the north end of Vatnajökull glacier",
                     "Skills": [
                         {
-                            "name": "Tobogan",
+                            "name": "Cleaning",
+                            "icon": "[Link]",
+                            "description": "Add text"
+                        },
+                        {
+                            "name": "Guiding",
+                            "icon": "[Link]",
+                            "description": "Add text"
+                        },
+                        {
+                            "name": "Maintaince of the hut",
                             "icon": "[Link]",
                             "description": "Add text"
                         }
                     ]
                 },
                 {
-                    "workplace": "Skíðasvæðin",
-                    "logo": "/img/workplace/Skidasvaedin-Logo.png",
-                    "title": "Ski patrol",
-                    "year": "2021-2022",
-                    "description": "Add text",
+                    "workplace": "The Enviromental Agancy of Iceland",
+                    "logo": "/img/workplace/Panorama-Logo.svg",
+                    "title": "Volcano Ranger",
+                    "year": "2021-2023",
+                    "description": "Worked as a ranger at the active volcanic area on hte reykjanes panisula",
                     "Skills": [
                         {
-                            "name": "Tobogan",
+                            "name": "People Management",
+                            "icon": "[Link]",
+                            "description": "Add text"
+                        },
+                        {
+                            "name": "Risk Management",
                             "icon": "[Link]",
                             "description": "Add text"
                         }
                     ]
                 },
                 {
-                    "workplace": "Skíðasvæðin",
+                    "workplace": "The Enviromental Agancy of Iceland",
                     "logo": "/img/workplace/Skidasvaedin-Logo.png",
-                    "title": "Area Manager",
+                    "title": "Ranger",
                     "year": "2022-2023",
-                    "description": "Add text",
+                    "description": "Worked as a ranger in the Icelandic highlands in Fjallabak and Tugnaáröræfi",
+                    "Skills": [
+                        {
+                            "name": "Guiding",
+                            "icon": "[Link]",
+                            "description": "Add text"
+                        },
+                        {
+                            "name": "Nature Protection",
+                            "icon": "[Link]",
+                            "description": "Add text"
+                        },
+                        {
+                            "name": "Working with foreign entities",
+                            "icon": "[Link]",
+                            "description": "Add text"
+                        },
+                        {
+                            "name": "Selfreliance",
+                            "icon": "[Link]",
+                            "description": "Add text"
+                        },
+                        {
+                            "name": "Broken Sprit",
+                            "icon": "[Link]",
+                            "description": "Add text"
+                        }
+                    ]
+                },
+                {
+                    "workplace": "Útivist",
+                    "logo": "/img/workplace/Skidasvaedin-Logo.png",
+                    "title": "Hut Warden",
+                    "year": "2024-2024",
+                    "description": "Working as a hut warden in Básar í Þórsmörk",
                     "Skills": [
                         {
                             "name": "Welding",
@@ -149,6 +286,28 @@
                             "description": "Add text"
                         }
                     ]
+                }
+            ]
+        },
+        {
+            "name": "First aid",
+            "cert": [],
+            "job": [
+                {
+                    "workplace": "Teaching"
+                },
+                {
+                    "workplace": "In the field"
+                }
+            ]
+        },
+        {
+            "name": "Grafik Design",
+            "cert": [],
+            "job":[],
+            "framework": [
+                {
+                    "name": "Figma"
                 }
             ]
         }
@@ -190,62 +349,6 @@
             "link": "[Link]"
         }
     ],
-    "Skills": {
-        "dev": [
-                {
-                    "id": 1,
-                    "name": "Front-end Development",
-                    "pro": 70
-                },
-                {
-                    "id": 2,
-                    "name": "Backend-end Development",
-                    "pro": 90
-                }
-        ],
-        "proleng": [
-            {
-                "id": 1,
-                "name": "Java",
-                "pro": 80
-            },
-            {
-                "id": 1,
-                "name": "JavaScript",
-                "pro": 80
-            },
-            {
-                "id": 1,
-                "name": "C#",
-                "pro": 60
-            },
-            {
-                "id": 1,
-                "name": "PHP",
-                "pro": 90
-            }
-        ]
-    },
-    "Learned": [
-        {
-            "id": 1,
-            "name": "Technical School of Reykjavík",
-            "length": "2015 - 2017",
-            "img": "/img/learned/TSoR.jpg"
-        },
-        {
-            "id": 2,
-            "name": "University of Iceland",
-            "length": "2018 - 2021",
-            "img": "/img/learned/UoI.png"
-        },
-        {
-            "id": 3,
-            "name": "ETH Zurich",
-            "length": "2023 - 2024",
-            "img": "/img/learned/ETHZ.png"
-        }
-    ],
     "Workspaces": [
         {
             "id": 1,
@@ -269,15 +372,32 @@
     "Cars": [
         {
             "id": 1,
-            "name": "Pajero mk2 2.5TD 4WD"
+            "name": "Pajero mk2 2.5TD 4WD",
+            "headshot": "[link]"
         },
         {
             "id": 2,
-            "name": "Pajero mk2 2.8TD 4WD - 38' "
+            "name": "Pajero mk2 2.8TD 4WD - 38' ",
+            "headshot": "[link]"
         },
         {
             "id": 3,
-            "name": "L300 2.5TD 4WD"
+            "name": "L300 2.5TD 4WD",
+            "headshot": "[link]",
+            "portfolio": [
+                {
+                    "dec": "dec",
+                    "link": "[Link]"
+                }
+            ],
+            "prints": [
+                {
+                    "name": "",
+                    "link": "",
+                    "model": "",
+                    "img": "[link]"
+                }
+            ]
         }
     ]
 }
