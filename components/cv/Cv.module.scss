@@ -94,3 +94,11 @@ $smallest-width: 800px;
         }
     }
 }
+.school {
+    &__projects {
+        img {
+            height: 1em;
+            width: 1em;
+        }
+    }
+}

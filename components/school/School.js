@@ -1,8 +1,8 @@
 import cvStyles from "../cv/Cv.module.scss"
 import { server } from "../../pages/config/index.js"
+import Tags from "./Tags.js"
 
 const School = ({learn}) => {
-    console.log(learn)
     return (
         <div className={cvStyles.cv__footer__learn}>
             <p style={{"background-image": `url(${server + learn.img})`, "background-size": "cover", "background-position": "center"}}></p>
@@ -15,18 +15,10 @@ const School = ({learn}) => {
                 {
                     learn.projects.map((project) => {
                         return (
-                            <div>
-                                {console.log(project.tags)}
-                                <p>{project.name}</p>
-                                {/* {
-                                    project.tags.map((tag) => {
-                                        return (
-                                            <div>
-                                                <p>{tag.name}</p>
-                                            </div>
-                                        )
-                                    })
-                                } */}
+                            <div className={cvStyles.school__projects}>
+                                <a href={project.link}><p>{project.name}</p></a>
+                                <a href={project.git}><img src="/img/socials/github.png"></img></a>
+                                <Tags tags={project.tags}></Tags>
                             </div>
                         )
                     })

@@ -18,6 +18,11 @@
                 "name": "Instagram",
                 "link": "https://www.instagram.com/stimmikex/",
                 "img": "/img/socials/instagram.png"
+            },
+            {
+                "name": "LinkedIn",
+                "link": "https://www.linkedin.com/in/styrmir-%C3%B3li-thorsteinsson-0174a1210/",
+                "img": "img/socials/instagram.png"
             }
         ],
         "img": "/img/user/user.png"
@@ -30,7 +35,14 @@
             "img": "/img/learned/TSoR.jpg",
             "projects": [
                 {
-                    "name": "RideAlong"
+                    "name": "RideAlong",
+                    "link": "[Link]",
+                    "git": "[link]",
+                    "tags": [
+                        {
+                            "name": "API"
+                        }
+                    ]
                 }
             ]
             
@@ -48,7 +60,14 @@
             ],
             "projects": [
                 {
-                    "name": "NordRedo"
+                    "name": "NordRedo",
+                    "link": "[Link]",
+                    "git": "[link]",
+                    "tags": [
+                        {
+                            "name": "NextJS"
+                        }
+                    ]
                 }
             ]
         },
@@ -60,14 +79,25 @@
             "projects": [
                 {
                     "name": "OffTheRoadtracker",
+                    "link": "[Link]",
+                    "git": "https://github.com/Stimmikex/OfftheRoadTracker",
                     "tags": [
                         {
                             "name": "Vue"
+                        }
+                    ],
+                    "sub-projects": [
+                        {
+                            "name": "API",
+                            "link": "[Link]",
+                            "git": "https://github.com/Stimmikex/OfftheRoadTracker-API"
                         }
                     ]
                 },
                 {
                     "name": "MixedAviation",
+                    "link": "[Link]",
+                    "git": "https://github.com/Stimmikex/mixedaviation",
                     "tags": [
                         {
                             "name": "Hololens 2"
@@ -76,6 +106,8 @@
                 },
                 {
                     "name": "HoloGuidance",
+                    "link": "[Link]",
+                    "git": "[link]",
                     "tags": [
                         {
                             "name": "Hololens 2"
@@ -84,6 +116,8 @@
                 },
                 {
                     "name": "Culinary Showdown",
+                    "link": "[Link]", 
+                    "git": "https://github.com/Stimmikex/CulinaryShowdown",
                     "tags": [
                         {
                             "name": "C#"
@@ -102,6 +136,7 @@
     "Workplaces": [
         {
             "name": "Skiing",
+            "background": "[Link]",
             "cert": [
                 {
                     "name": "Wilderness first responder",
@@ -177,6 +212,7 @@
         },
         {
             "name": "Hálendið",
+            "background": "[Link]",
             "cert": [
                 {
                     "name": "Wilderness first responder",
@@ -294,10 +330,12 @@
             "cert": [],
             "job": [
                 {
-                    "workplace": "Teaching"
+                    "workplace": "Teaching",
+                    "description": "Have been teaching first aid for Rangers for Umhverfisstofnun and Vatnajökulsþjóðgarður"
                 },
                 {
-                    "workplace": "In the field"
+                    "workplace": "In the field",
+                    "description": "Have gained a lot of work expirence working as ski patrol, ranger and an active member of a search and rescue squad."
                 }
             ]
         },
