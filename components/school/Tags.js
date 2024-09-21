@@ -1,7 +1,9 @@
-const Tag = (tags) => {
+import cvStyles from "../cv/Cv.module.scss"
+
+const Tag = ({tags}) => {
     return (
-        <div>
-            {tags.tags.map((tag) => {
+        <div className={cvStyles.school__projects__tags}>
+            {tags.map((tag) => {
                 return (
                     <p>{tag.name}</p>
                 )

@@ -1,6 +1,7 @@
 import cvStyles from "../cv/Cv.module.scss"
 import { server } from "../../pages/config/index.js"
 import Tags from "./Tags.js"
+import Teaching from "./teaching/Teaching"
 
 const School = ({learn}) => {
     return (
@@ -25,7 +26,9 @@ const School = ({learn}) => {
                 }
             </div>
             <div>
-                <p>Student Groups</p>
+                {
+                    learn.student_groups? <p>Student Groups</p> : null
+                }
                 {
                     learn.student_groups?.map((group) => {
                         return (
@@ -37,6 +40,7 @@ const School = ({learn}) => {
                     })
                 }
             </div>
+            <Teaching teaching={learn.teaching}></Teaching>
         </div>
     )
 }

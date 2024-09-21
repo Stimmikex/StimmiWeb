@@ -61,11 +61,46 @@
             "projects": [
                 {
                     "name": "NordRedo",
-                    "link": "[Link]",
+                    "link": "https://nord.is",
                     "git": "[link]",
                     "tags": [
                         {
                             "name": "NextJS"
+                        }
+                    ]
+                }
+            ],
+            "teaching": [
+                {
+                    "course": "Web development 1",
+                    "link": "",
+                    "tours": 2,
+                    "years": [
+                        {
+                            "year": "2019-2020"
+                        },
+                        {
+                            "year": "2021-2022"
+                        }
+                    ]
+                },
+                {
+                    "course": "Databases 1",
+                    "link": "",
+                    "tours": 1,
+                    "years": [
+                        {
+                            "year": "2024-2025"
+                        }
+                    ]
+                },
+                {
+                    "course": "Software Project 1",
+                    "link": "",
+                    "tours": 1,
+                    "years": [
+                        {
+                            "year": "2021-2022"
                         }
                     ]
                 }

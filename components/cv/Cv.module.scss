@@ -96,9 +96,15 @@ $smallest-width: 800px;
 }
 .school {
     &__projects {
+        display: grid;
+        grid-template-columns: 70% 15% 15%;
+        align-items: center;
         img {
             height: 1em;
             width: 1em;
+        }
+        &__tags {
+            display: flex;
         }
     }
 }
