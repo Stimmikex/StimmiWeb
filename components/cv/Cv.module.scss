@@ -87,7 +87,7 @@ $smallest-width: 800px;
         }
         &__learn {
             display: grid;
-            grid-template-columns: 30% 70%;
+            grid-template-columns: 50% 50%;
             p {
                 margin: 1em;
             }
@@ -97,7 +97,7 @@ $smallest-width: 800px;
 .school {
     &__projects {
         display: grid;
-        grid-template-columns: 70% 15% 15%;
+        grid-template-columns: 50% 25% 25%;
         align-items: center;
         img {
             height: 1em;

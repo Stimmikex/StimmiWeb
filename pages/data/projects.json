@@ -110,7 +110,7 @@
             "id": 3,
             "name": "ETH Zurich",
             "length": "sept 2023 - june 2024",
-            "img": "/img/learned/ETHZ.png",
+            "img": "/img/learned/ETH.svg",
             "projects": [
                 {
                     "name": "OffTheRoadtracker",
@@ -118,7 +118,8 @@
                     "git": "https://github.com/Stimmikex/OfftheRoadTracker",
                     "tags": [
                         {
-                            "name": "Vue"
+                            "name": "Vue",
+                            "color": "#41B883"
                         }
                     ],
                     "sub-projects": [
@@ -135,7 +136,8 @@
                     "git": "https://github.com/Stimmikex/mixedaviation",
                     "tags": [
                         {
-                            "name": "Hololens 2"
+                            "name": "Hololens 2",
+                            "color": "#4903fc"
                         }
                     ]
                 },
@@ -145,7 +147,8 @@
                     "git": "[link]",
                     "tags": [
                         {
-                            "name": "Hololens 2"
+                            "name": "Hololens 2",
+                            "color": "#4903fc"
                         }
                     ]
                 },
@@ -155,13 +158,16 @@
                     "git": "https://github.com/Stimmikex/CulinaryShowdown",
                     "tags": [
                         {
-                            "name": "C#"
+                            "name": "C#",
+                            "color": "#0064fa"
                         },
                         {
-                            "name": "MonoGame"
+                            "name": "MonoGame",
+                            "color": "#ff9d00"
                         },
                         {
-                            "name": "VideoGame"
+                            "name": "VideoGame",
+                            "color": "#fa007d"
                         }
                     ]
                 }

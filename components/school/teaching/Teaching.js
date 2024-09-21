@@ -10,16 +10,18 @@ const Teaching = ({teaching}) => {
             {
                 teaching? <p>Teaching</p> : null
             }
-            {
-                teaching?.map((teach) => {
-                    return (
-                        <div className={teachingStyles.teach}>
-                            <p>{teach.course}</p>
-                            <Years years={teach.years} key={teach.years}></Years>
-                        </div>
-                    )
-                })
-            }
+            <div className={teachingStyles.teaching__container}>
+                {
+                    teaching?.map((teach) => {
+                        return (
+                            <div className={teachingStyles.teach}>
+                                <p>{teach.course}</p>
+                                <Years years={teach.years} key={teach.years}></Years>
+                            </div>
+                        )
+                    })
+                }
+            </div>
         </div>
     )
 }
