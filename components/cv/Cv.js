@@ -8,7 +8,6 @@ const Cv = ({ user, learned }) => {
             <div className={cvStyles.cv__header}>
                 <div className={cvStyles.cv__header__left}>
                     <p style={{"background-image": `url(${server + user.img})`, "background-size": "cover", "background-position": "center"}}></p>
-                    {/* <img src={server + user.img} alt="test"></img> */}
                 </div>
                 <div className={cvStyles.cv__header__right}>
                     {user.socials.map((social) => {

@@ -1,7 +1,33 @@
+.projectsWrapper {
+    display: grid; /* Maintain the grid structure */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust as per your grid setup */
+    grid-gap: 20px;
+}
+
+
+.projectsContainer {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
+    /* Prevent shrinking other grid items */
+
+    &.show {
+        max-height: 1000px; /* Set this to a large enough value to accommodate your content */
+        opacity: 1;
+    }
+
+    &.hide {
+        max-height: 0;
+        opacity: 0;
+    }
+}
+
 .projects {
     display: grid;
-    grid-template-columns: 50% 25% 25%;
+    grid-template-columns: 50% 20% 40%;
     align-items: center;
+    margin: 1em;
     img {
         height: 1em;
         width: 1em;
@@ -12,5 +38,24 @@
     }
     &__git {
         justify-self: center;
+    }
+}
+.tags {
+    margin: 0;
+    padding: 0.5em;
+}
+.menu {
+    display: flex;
+    align-items: center;
+    &__counter {
+        display: flex;
+        align-content: center;
+        background-color: aqua;
+        height: 1em;
+        width: 1em;
+        padding: 1em;
+        border-radius: 20%;
+        justify-content: center;
+        align-items: center;
     }
 }

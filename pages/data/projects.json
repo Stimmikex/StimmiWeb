@@ -40,7 +40,8 @@
                     "git": "[link]",
                     "tags": [
                         {
-                            "name": "API"
+                            "name": "API",
+                            "color": "#41B883"
                         }
                     ]
                 }
@@ -65,7 +66,8 @@
                     "git": "[link]",
                     "tags": [
                         {
-                            "name": "NextJS"
+                            "name": "NextJS",
+                            "color": "#41B883"
                         }
                     ]
                 }
