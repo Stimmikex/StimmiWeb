@@ -41,8 +41,14 @@
     }
 }
 .tags {
-    margin: 0;
+    margin: 0.25em;
+    border-radius: 1em;
     padding: 0.5em;
+    text-align: center;
+    color: white;
+}
+.tagsSelected {
+    display: flex;
 }
 .menu {
     display: flex;
@@ -58,4 +64,12 @@
         justify-content: center;
         align-items: center;
     }
+}
+
+.sub_projects {
+    display: flex;
+    grid-column: span 3;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
 }

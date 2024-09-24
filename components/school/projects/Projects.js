@@ -39,6 +39,17 @@ const Projects = ({ projects }) => {
                             <img src="/img/socials/github.png" alt="GitHub" />
                         </a>
                         <Tags tags={project.tags} />
+                        {project.sub_projects?.map((sub_p) => (
+                            <div className={projectStyles.sub_projects}>
+                                <p>|___</p>
+                                <a href={sub_p.link} className={projectStyles.projects__link}>
+                                    <p>{sub_p.name}</p>
+                                </a>
+                                <a href={sub_p.git} className={projectStyles.projects__git}>
+                                    <img src="/img/socials/github.png" alt="GitHub" />
+                                </a>
+                            </div>
+                        ))}
                     </div>
                 ))}
             </div>

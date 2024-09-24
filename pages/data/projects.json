@@ -124,7 +124,7 @@
                             "color": "#41B883"
                         }
                     ],
-                    "sub-projects": [
+                    "sub_projects": [
                         {
                             "name": "API",
                             "link": "[Link]",

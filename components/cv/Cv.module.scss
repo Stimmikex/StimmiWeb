@@ -92,5 +92,9 @@ $smallest-width: 800px;
                 margin: 1em;
             }
         }
+        &__tags {
+            display: flex;
+            align-items: center;
+        }
     }
 }
