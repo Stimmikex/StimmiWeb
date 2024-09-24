@@ -46,9 +46,15 @@
     padding: 0.5em;
     text-align: center;
     color: white;
+    
 }
 .tagsSelected {
     display: flex;
+    button {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+    }
 }
 .menu {
     display: flex;

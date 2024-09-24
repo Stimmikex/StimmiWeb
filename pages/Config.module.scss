@@ -1,12 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=REM:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=REM:wght@100;400;700&display=swap');
+
+@font-face {
+    font-family: "MilkyVintage";
+    src: url("/fonts/MilkyVintage-Regular.ttf") format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
 
 html {
     scroll-behavior: smooth;
+    font-family: 'REM', serif; /* Apply Google Font globally */
+}
+
+body {
+    font-family: 'REM', serif; /* Ensure it's applied to body as well */
 }
 
 .mainContainer {
     display: grid;
     grid-template-rows: auto;
     grid-auto-columns: 100%;
-    font-family: 'REM', serif
+    font-family: 'REM', serif; /* Apply Google Font to this container */
+}
+
+/* Example of using your custom local font */
+.customText {
+    font-family: "MilkyVintage", serif; /* Apply local font here */
 }

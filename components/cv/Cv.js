@@ -1,23 +1,37 @@
+import { useState } from "react";
 import cvStyles from "./Cv.module.scss";
 import School from "../school/School.js";
 import { server } from "../../pages/config/index.js";
 import TagsSelected from "../school/projects/TagsSelected";
 
-const Cv = ({ user, learned, projects }) => {
-    // Step 1: Gather all tags across all projects
+const Cv = ({ user, learned }) => {
+    const [selectedTag, setSelectedTag] = useState(null);
+
     const allTags = learned
         .flatMap(learn => learn.projects)
         .flatMap(project => project.tags);
 
-    // Step 2: Filter out unique tags using a Map
     const uniqueTagsMap = new Map();
     allTags.forEach((tag) => {
         const key = `${tag.name}-${tag.color}`;
         if (!uniqueTagsMap.has(key)) {
-            uniqueTagsMap.set(key, tag); // Add only unique tags based on name and color
+            uniqueTagsMap.set(key, tag);
         }
     });
     const uniqueTags = Array.from(uniqueTagsMap.values());
+
+    const filteredLearned = selectedTag
+        ? learned.map((learn) => ({
+              ...learn,
+              projects: learn.projects.filter((project) =>
+                  project.tags.some((tag) => tag.name === selectedTag.name && tag.color === selectedTag.color)
+              )
+          }))
+        : learned;
+
+    const handleTagClick = (tag) => {
+        setSelectedTag(tag);
+    };
 
     return (
         <div className={cvStyles.cv}>
@@ -54,13 +68,15 @@ const Cv = ({ user, learned, projects }) => {
 
                     <div className={cvStyles.cv__footer__tags}>
                         <p>Tags: </p>
-                        {/* Step 3: Pass the unique tags to TagsSelected */}
-                        <TagsSelected tags={uniqueTags}></TagsSelected>
+                        <TagsSelected
+                            tags={uniqueTags}
+                            onTagClick={handleTagClick}
+                        ></TagsSelected>
                     </div>
                 </div>
 
                 <div className={cvStyles.cv__footer__container}>
-                    {learned.map((learn, index) => (
+                    {filteredLearned.map((learn, index) => (
                         <School key={index} learn={learn}></School>
                     ))}
                 </div>
