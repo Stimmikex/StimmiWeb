@@ -3,38 +3,36 @@ import teachingStyles from "./Teaching.module.scss";
 import Years from "./Years.js";
 
 const Teaching = ({ teaching }) => {
-    const [showTeaching, setShowTeaching] = useState(false); // State to toggle the content
+    const [showPopup, setShowPopup] = useState(false); // State to toggle the popup visibility
 
-    if (!teaching) {
-        return null;
-    }
-
-    const toggleTeachingVisibility = () => {
-        setShowTeaching(!showTeaching); // Toggle the visibility state
+    const togglePopupVisibility = () => {
+        setShowPopup((prev) => !prev); // Toggle popup visibility
     };
 
     return (
         <div className={teachingStyles.teaching}>
-            {teaching ? <p>Teaching</p> : null}
-            
             {/* Button to toggle the visibility */}
-            <button 
-                onClick={toggleTeachingVisibility} 
+            <button
+                onClick={togglePopupVisibility}
                 className={teachingStyles.teaching__toggleButton}
             >
-                {showTeaching ? "Hide" : "Show"} Teaching
+                {showPopup ? "Hide Teaching" : "Show Teaching"}
             </button>
 
-            {/* Teaching content with conditional classes for smooth transition */}
-            <div
-                className={`${teachingStyles.teaching__container} ${showTeaching ? teachingStyles.show : teachingStyles.hide}`}
-            >
-                {teaching?.map((teach) => (
-                    <div className={teachingStyles.teach} key={teach.course}>
-                        <p>{teach.course}</p>
-                        <Years years={teach.years} key={teach.years}></Years>
-                    </div>
-                ))}
+            {/* Popup displayed below the button */}
+            <div className={`${teachingStyles.popup} ${showPopup ? teachingStyles.show : ""}`}>
+                <div className={teachingStyles.popupContent}>
+                    <button className={teachingStyles.closeButton} onClick={() => setShowPopup(false)}>
+                        &times;
+                    </button>
+                    <h2>Teaching</h2>
+                    {teaching?.map((teach) => (
+                        <div className={teachingStyles.teach} key={teach.course}>
+                            <p><strong>Course:</strong> {teach.course}</p>
+                            <Years years={teach.years} />
+                        </div>
+                    ))}
+                </div>
             </div>
         </div>
     );

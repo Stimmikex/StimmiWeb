@@ -22,7 +22,7 @@
             {
                 "name": "LinkedIn",
                 "link": "https://www.linkedin.com/in/styrmir-%C3%B3li-thorsteinsson-0174a1210/",
-                "img": "img/socials/instagram.png"
+                "img": "img/socials/linkedin.png"
             }
         ],
         "img": "/img/user/user.png"
@@ -37,13 +37,24 @@
                 {
                     "name": "RideAlong",
                     "link": "[Link]",
-                    "git": "[link]",
+                    "git": "https://github.com/Stimmikex/Ride_along",
                     "tags": [
                         {
                             "name": "API",
                             "color": "#41B883"
+                        },
+                        {
+                            "name": "Laravel",
+                            "color": "#41B883"
                         }
-                    ]
+                    ],
+                    "team": [
+                        {
+                            "name": "Bjarki Fannar Snorrason",
+                            "github": "https://github.com/bjarkifannar"
+                        }
+                    ],
+                    "video": "[link]"
                 }
             ]
             
@@ -63,13 +74,36 @@
                 {
                     "name": "NordRedo",
                     "link": "https://nord.is",
-                    "git": "[link]",
+                    "git": "https://github.com/HI-Nord/Nord-Frontend",
                     "tags": [
                         {
                             "name": "NextJS",
                             "color": "#41B883"
+                        },
+                        {
+                            "name": "API",
+                            "color": "#41B883"
                         }
-                    ]
+                    ],
+                    "sub_projects": [
+                        {
+                            "name": "API",
+                            "link": "https://nord.is/bakendi/",
+                            "git": "https://github.com/HI-Nord/Nord-Backend"
+                        }
+                    ],
+                    "team": [
+                        {
+                            "name": "Þorvaldur Tumi Baldursson",
+                            "github": "https://github.com/ofurtumi",
+                            "linkedin": ""
+                        },
+                        {
+                            "name": "Árni Þór Sörensen",
+                            "github": "https://github.com/Selph"
+                        }
+                    ],
+                    "paper": ""
                 }
             ],
             "teaching": [
@@ -112,7 +146,7 @@
             "id": 3,
             "name": "ETH Zurich",
             "length": "sept 2023 - june 2024",
-            "img": "/img/learned/ETH.svg",
+            "img": "/img/learned/ETHZ.jpg",
             "projects": [
                 {
                     "name": "OffTheRoadtracker",
@@ -122,12 +156,16 @@
                         {
                             "name": "Vue",
                             "color": "#41B883"
+                        },
+                        {
+                            "name": "API",
+                            "color": "#41B883"
                         }
                     ],
                     "sub_projects": [
                         {
                             "name": "API",
-                            "link": "[Link]",
+                            "link": "http://185.112.144.101:8000/",
                             "git": "https://github.com/Stimmikex/OfftheRoadTracker-API"
                         }
                     ]
@@ -141,6 +179,17 @@
                             "name": "Hololens 2",
                             "color": "#4903fc"
                         }
+                    ],
+                    "team": [
+                        {
+                            "name": "Rohit Koonireddy",
+                            "github": "https://github.com/rkoonireddy",
+                            "linkedin": "https://www.linkedin.com/in/rohit-koonireddy/"
+                        },
+                        {
+                            "name": "Adrian Sarbach",
+                            "linkedin": "https://www.linkedin.com/in/adrian-sarbach-541b4020a/"
+                        }
                     ]
                 },
                 {
@@ -151,6 +200,23 @@
                         {
                             "name": "Hololens 2",
                             "color": "#4903fc"
+                        }
+                    ],
+                    "team": [
+                        {
+                            "name": "Haoran (Peter) Xu",
+                            "github": "https://github.com/PeterBoxXu",
+                            "linkedin": "https://www.linkedin.com/in/peterxu2021/"
+                        },
+                        {
+                            "name": "Tor Børve Rasmussen",
+                            "github": "https://github.com/TorBorve",
+                            "linkedin": "https://www.linkedin.com/in/tor-b%C3%B8rve-rasmussen-251304203/?original_referer=https%3A%2F%2Fwww%2Egoogle%2Ecom%2F&originalSubdomain=no"
+                        },
+                        {
+                            "name": "Faye Zhang",
+                            "github": "https://github.com/fayefzhang",
+                            "linkedin": "https://www.linkedin.com/in/fayefzhang/"
                         }
                     ]
                 },
@@ -170,6 +236,22 @@
                         {
                             "name": "VideoGame",
                             "color": "#fa007d"
+                        }
+                    ],
+                    "team": [
+                        {
+                            "name": "Haoran (Peter) Xu",
+                            "github": "https://github.com/PeterBoxXu",
+                            "linkedin": "https://www.linkedin.com/in/peterxu2021/"
+                        },
+                        {
+                            "name": "Jón Gunnar Hannesson",
+                            "github": "https://github.com/jongvnnar",
+                            "linkedin": "https://www.linkedin.com/in/tor-b%C3%B8rve-rasmussen-251304203/?original_referer=https%3A%2F%2Fwww%2Egoogle%2Ecom%2F&originalSubdomain=no"
+                        },
+                        {
+                            "name": "Saatushan Sabesan",
+                            "linkedin": "https://www.linkedin.com/in/saatushan-sabesan-baab4131a/?originalSubdomain=ch"
                         }
                     ]
                 }
@@ -272,7 +354,7 @@
             "job": [
                 {
                     "workplace": "Ferðafélag Fljótdalshéraðs",
-                    "logo": "/img/workplace/Panorama-Logo.svg",
+                    "logo": "/img/workplace/ferdaf.webp",
                     "title": "Hut Warden/Glacier Guide",
                     "year": "2018-2018",
                     "description": "Spent the summer as a hut warden in Sigurðarskáli on the north end of Vatnajökull glacier",
@@ -296,7 +378,7 @@
                 },
                 {
                     "workplace": "The Enviromental Agancy of Iceland",
-                    "logo": "/img/workplace/Panorama-Logo.svg",
+                    "logo": "/img/workplace/ust.png",
                     "title": "Volcano Ranger",
                     "year": "2021-2023",
                     "description": "Worked as a ranger at the active volcanic area on hte reykjanes panisula",
@@ -315,7 +397,7 @@
                 },
                 {
                     "workplace": "The Enviromental Agancy of Iceland",
-                    "logo": "/img/workplace/Skidasvaedin-Logo.png",
+                    "logo": "/img/workplace/ust.png",
                     "title": "Ranger",
                     "year": "2022-2023",
                     "description": "Worked as a ranger in the Icelandic highlands in Fjallabak and Tugnaáröræfi",
@@ -349,7 +431,7 @@
                 },
                 {
                     "workplace": "Útivist",
-                    "logo": "/img/workplace/Skidasvaedin-Logo.png",
+                    "logo": "/img/workplace/utivist.webp",
                     "title": "Hut Warden",
                     "year": "2024-2024",
                     "description": "Working as a hut warden in Básar í Þórsmörk",

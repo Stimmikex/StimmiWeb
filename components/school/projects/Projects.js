@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Tags from "./Tags.js";
 import projectStyles from "./Project.module.scss";
+import Team from "./Team.js";
 
 const Projects = ({ projects }) => {
     const [showProjects, setShowProjects] = useState(false);
@@ -50,6 +51,12 @@ const Projects = ({ projects }) => {
                                 </a>
                             </div>
                         ))}
+                        {
+                            project.team?
+                                <Team team={project.team}></Team>
+                            :
+                                null
+                        }
                     </div>
                 ))}
             </div>

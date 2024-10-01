@@ -1,46 +1,76 @@
 .teaching {
-    display: flex;
-    grid-column: span 2;
-    &__container {
-        display: flex;
-    }
-}
-.teach {
-    display: flex;
-    flex-direction: column;
-}
-
-.teaching__container {
-    height: 0;
-    opacity: 0;
-    visibility: hidden;
-    overflow: hidden;
-    transition: height 0.4s ease, opacity 0.4s ease, visibility 0.4s ease;
-
-    &.show {
-        height: auto; /* Will expand to fit the content */
-        opacity: 1;
-        visibility: visible;
-    }
-
-    &.hide {
-        height: 0;
-        opacity: 0;
-        visibility: hidden;
-    }
+    position: relative; // Make the teaching container relative for the popup positioning
+    display: inline-block; // Ensure the container sizes to the button
 }
 
 .teaching__toggleButton {
-    margin-bottom: 10px;
-    padding: 5px 10px;
+    margin-bottom: 1em; // Using em for margin
+    padding: 0.5em 1em; // Using em for padding
     cursor: pointer;
     background-color: #007bff;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 0.25em; // Using em for border radius
     transition: background-color 0.2s ease;
 
     &:hover {
         background-color: #0056b3;
     }
+}
+
+.teach {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em; // Using em for margin
+}
+
+.popup {
+    position: absolute; // Position the popup absolutely to the button container
+    background-color: white;
+    padding: 1.5em; // Using em for padding
+    border-radius: 0.5em; // Using em for border radius
+    box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.1); // Using em for shadow
+    z-index: 100;
+    margin-top: 1em; // Space between the button and the popup
+    left: 0; // Align popup with the button
+    width: 23em; // Using em for width
+
+    // Transition properties
+    opacity: 0; // Initial opacity
+    visibility: hidden; // Initial visibility
+    transform: translateY(-0.625em); // Slightly raise it for effect (10px is approximately 0.625em)
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease; // Define the transition
+
+    &.show {
+        opacity: 1; // Final opacity when shown
+        visibility: visible; // Final visibility
+        transform: translateY(0); // Reset position
+    }
+}
+
+.popupContent {
+    position: relative;
+}
+
+.closeButton {
+    position: absolute;
+    top: 0.5em; // Using em for position
+    right: 1em; // Using em for position
+    background: none;
+    border: none;
+    font-size: 2em; // Using em for font size
+    cursor: pointer;
+    color: #333;
+}
+
+.popup h2 {
+    margin-bottom: 2em; // Using em for margin
+}
+
+.popup p {
+    margin-bottom: 1em; // Using em for margin
+}
+
+.popup p strong {
+    font-weight: bold;
 }

@@ -8,7 +8,14 @@ import Projects from "./projects/Projects"
 const School = ({learn}) => {
     return (
         <div className={cvStyles.cv__footer__learn}>
-            <p style={{"background-image": `url(${server + learn.img})`, "background-size": "cover", "background-position": "center", "height": "5em"}}></p>
+            <p style={{
+                "background-image": `url(${server + learn.img})`, 
+                "background-size": "cover", 
+                "background-position": "center", 
+                "height": "5em", 
+                "border-radius": "1em",
+                "border-bottom": "0.5em solid black"}}>
+            </p>
             <div className={cvStyles.cv__footer__learn__info}>
                 <h3>{learn.name}</h3>
                 <i>{learn.length}</i>
@@ -16,7 +23,12 @@ const School = ({learn}) => {
             <div className={schoolStyle.subs}>
                 <Projects projects={learn.projects}></Projects>
                 {/* <StudentGroups studentgroups={learn.student_groups}></StudentGroups> */}
-                <Teaching teaching={learn.teaching}></Teaching>
+                {
+                    learn.teaching?
+                        <Teaching teaching={learn.teaching}></Teaching>
+                    :
+                        null
+                }
             </div>
         </div>
     )
