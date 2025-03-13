@@ -139,6 +139,16 @@
                             "year": "2021-2022"
                         }
                     ]
+                },
+                {
+                    "course": "Software Project 2",
+                    "link": "",
+                    "tours": 1,
+                    "years": [
+                        {
+                            "year": "2024-2025"
+                        }
+                    ]
                 }
             ]
         },
