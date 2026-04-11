@@ -1,38 +1,81 @@
-import { useState, useEffect, useRef } from 'react';
 import WorkplaceStyle from './Workplace.module.scss';
 
 const Workplace = ({ workplace }) => {
 
+    // ---- GROUP JOBS BY workplace NAME ----
+    const groupedJobs = workplace.job.reduce((groups, job) => {
+        const key = job.workplace; // string
+        if (!groups[key]) groups[key] = [];
+        groups[key].push(job);
+        return groups;
+    }, {});
+
+    // Convert back into an array so we can map it
+    const groupedJobEntries = Object.entries(groupedJobs);
+
     return (
         <div className={WorkplaceStyle.workplace}>
-            <p>{workplace.name}</p>
+
+            <h2>{workplace.name}</h2>
+            
+            {/* JOB TIMELINE */}
             <div className={WorkplaceStyle.workplace__job}>
-                <p>Jobs</p>
-                <ul>
-                    {workplace.job.map((job, index) => (
-                        <div
-                            key={index}
-                        >
-                            <p>{job.workplace}</p>
-                            <img src={job.logo} alt={job.title}></img>
-                            <p>{job.title}</p>
-                            <p>{job.year}</p>
-                            <p>{job.description}</p>
+                <p className={WorkplaceStyle.sectionTitle}>Jobs</p>
+
+                {groupedJobEntries.map(([placeName, jobs], groupIndex) => (
+                    <div key={groupIndex} className={WorkplaceStyle.workplaceGroup}>
+                        
+                        {/* Group Title */}
+                        <h3 className={WorkplaceStyle.groupTitle}>{placeName}</h3>
+
+                        <div className={WorkplaceStyle.timeline}>
+                            {jobs.map((job, index) => (
+                                
+                                /* ▼▼▼ ADDED zig-zag alternating class ▼▼▼ */
+                                <div
+                                    key={index}
+                                    className={`${WorkplaceStyle.timelineItem} ${
+                                        index % 2 === 0 ? WorkplaceStyle.left : WorkplaceStyle.right
+                                    }`}
+                                >
+                                    {/* ▲▲▲ ONLY THIS LINE CHANGED ▲▲▲ */}
+
+                                    <div className={WorkplaceStyle.marker}>
+                                        <span className={WorkplaceStyle.dot}></span>
+                                        {index !== jobs.length - 1 && (
+                                            <span className={WorkplaceStyle.line}></span>
+                                        )}
+                                    </div>
+
+                                    <div className={WorkplaceStyle.content}>
+                                        <img src={job.logo} alt={job.title} />
+                                        <div>
+                                            <p className={WorkplaceStyle.jobTitle}>{job.title}</p>
+                                            <p className={WorkplaceStyle.jobYear}>{job.year}</p>
+                                            <p>{job.description}</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            ))}
                         </div>
-                    ))}
-                </ul>
+                    </div>
+                ))}
             </div>
+
+            {/* CERTIFICATIONS */}
             <div className={WorkplaceStyle.workplace__cert}>
-                <p>Certification</p>
-                <ul>
+                <p className={WorkplaceStyle.sectionTitle}>Certification</p>
+                <ul className={WorkplaceStyle.certList}>
                     {workplace.cert.map((cert, index) => (
-                        <div key={index}>
+                        <li key={index} className={WorkplaceStyle.certItem}>
                             <p>{cert.name}</p>
-                            <img src={cert.logo} alt={cert.name}></img>
-                        </div>
+                            <img src={cert.logo} alt={cert.name} />
+                        </li>
                     ))}
                 </ul>
             </div>
+
         </div>
     );
 };

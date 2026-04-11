@@ -12,6 +12,8 @@ const Project = ({ car }) => {
                     <p>{car.dec}</p>
                 </div>
             </div>
+            { car.figma ? 
+                <div><a href={car.figma.link}><p>figma</p></a></div>: null}
             <div>
                 <a href={car.link}><p>Link</p></a>
             </div>

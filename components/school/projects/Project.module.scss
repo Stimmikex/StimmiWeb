@@ -1,6 +1,6 @@
 .projectsWrapper {
     display: grid; /* Maintain the grid structure */
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust as per your grid setup */
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr)); /* Adjust as per your grid setup */
     grid-gap: 20px;
 }
 
@@ -13,7 +13,7 @@
     /* Prevent shrinking other grid items */
 
     &.show {
-        max-height: 1000px; /* Set this to a large enough value to accommodate your content */
+        max-height: 100em; /* Set this to a large enough value to accommodate your content */
         opacity: 1;
     }
 
@@ -29,8 +29,8 @@
     align-items: center;
     margin: 1em;
     img {
-        height: 1em;
-        width: 1em;
+        height: 2em;
+        width: 2em;
     }
     &__link {
         background-color: brown;
@@ -50,6 +50,7 @@
 }
 .tagsSelected {
     display: flex;
+    flex-wrap: wrap;
     button {
         border: none;
         background-color: transparent;

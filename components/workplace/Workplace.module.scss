@@ -1,19 +1,184 @@
+/* --------------------------------------------- */
+/* WAVY MOTION ANIMATION */
+/* --------------------------------------------- */
+@keyframes wavyLine {
+    0% {
+        transform: translateX(-50%) scaleY(1);
+        filter: drop-shadow(0 0 .1em rgba(0,0,0,0.1));
+    }
+    50% {
+        transform: translateX(-50%) scaleY(1.05);
+        filter: drop-shadow(0 .1em .2em rgba(0,0,0,0.15));
+    }
+    100% {
+        transform: translateX(-50%) scaleY(1);
+        filter: drop-shadow(0 0 .1em rgba(0,0,0,0.1));
+    }
+}
+
 .workplace {
     font-family: "REM", sans-serif;
     display: grid;
-    height: 100vh;
     grid-template-columns: 20% 60% 20%;
+    min-height: 100vh;
     overflow: hidden;
+    padding: 2em;
+    
 
-    &__cert {
-        img {
-            width: 20%;
+    .sectionTitle {
+        font-size: 1.4em;
+        margin-bottom: 1em;
+        font-weight: 600;
+    }
+
+    /* --------------------------------------------- */
+    /*  TIMELINE GROUP */
+    /* --------------------------------------------- */
+    .workplaceGroup {
+        margin-bottom: 4em;
+
+        .groupTitle {
+            font-size: 1.6em;
+            margin-bottom: 1.5em;
+            font-weight: 700;
         }
     }
-    
-    &__job {
-        img {
-            width: 10%;
+
+    /* --------------------------------------------- */
+    /*  ORGANIC TIMELINE BASE */
+    /* --------------------------------------------- */
+    .timeline {
+        position: relative;
+        margin: 0 auto;
+        width: 90%;
+        display: grid;
+        gap: 4em;
+    }
+
+    /* main timeline connecting spine */
+    .timeline::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 0;
+        width: .25em;
+        height: 100%;
+        background: #9993;
+        border-radius: 1em;
+        transform: translateX(-50%);
+    }
+
+    /* --------------------------------------------- */
+    /*  TIMELINE ITEM */
+    /* --------------------------------------------- */
+    .timelineItem {
+        position: relative;
+        width: 100%;
+        display: flex;
+        gap: 1.5em;
+        align-items: flex-start;
+    }
+
+    /* push left / right content */
+    .left {
+        justify-content: flex-start;
+
+        .content {
+            text-align: right;
+            margin-left: auto;
         }
+    }
+
+    .right {
+        justify-content: flex-end;
+
+        .content {
+            text-align: left;
+            margin-right: auto;
+        }
+    }
+
+    /* --------------------------------------------- */
+    /*  DOT + ORGANIC CURVED LINE */
+    /* --------------------------------------------- */
+    .marker {
+        position: relative;
+        width: 1em;
+        height: 1em;
+        flex-shrink: 0;
+    }
+
+    .dot {
+        width: 1em;
+        height: 1em;
+        background: #444;
+        border-radius: 50%;
+        border: .25em solid #fff;
+        box-shadow: 0 0 .4em #0003;
+        position: relative;
+        z-index: 2;
+    }
+
+    /* Curved organic connector */
+    .line {
+        position: absolute;
+        top: 1em;
+        left: 50%;
+        width: .25em;
+        height: 4em;
+        transform: translateX(-50%);
+        background: none;
+    
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='64'%3E%3Cpath d='M2 0 C -4 16, 8 32, 2 64' stroke='%23999' stroke-width='2' fill='none' stroke-linecap='round' /%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    
+        /* 🌊 wavy animation */
+        animation: wavyLine 3s ease-in-out infinite;
+        transform-origin: center top;
+    }
+
+    /* --------------------------------------------- */
+    /*  CONTENT BOXES */
+    /* --------------------------------------------- */
+    .content {
+        background: #f7f7f7;
+        padding: 1.5em;
+        border-radius: 1em;
+        max-width: 22em;
+        box-shadow: 0 .3em .8em #0002;
+        display: flex;
+        gap: 1em;
+        align-items: flex-start;
+
+        img {
+            width: 4em;
+            height: 4em;
+            object-fit: contain;
+        }
+
+        .jobTitle {
+            font-size: 1.2em;
+            font-weight: 600;
+        }
+
+        .jobYear {
+            font-size: 1em;
+            opacity: .6;
+            margin-bottom: .5em;
+        }
+    }
+
+    /* --------------------------------------------- */
+    /*  CERTIFICATIONS */
+    /* --------------------------------------------- */
+    .workplace__cert img {
+        width: 6em;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
     }
 }

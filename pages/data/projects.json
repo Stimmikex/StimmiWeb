@@ -123,10 +123,13 @@
                 {
                     "course": "Databases 1",
                     "link": "",
-                    "tours": 1,
+                    "tours": 2,
                     "years": [
                         {
                             "year": "2024-2025"
+                        }, 
+                        {
+                            "year": "2025-2026"
                         }
                     ]
                 },
@@ -307,7 +310,7 @@
                 {
                     "workplace": "Skíðasvæðin",
                     "logo": "/img/workplace/Skidasvaedin-Logo.png",
-                    "title": "Ski patrol",
+                    "title": "Ski Patrol",
                     "year": "2021-2022",
                     "description": "Add text",
                     "Skills": [
@@ -329,6 +332,44 @@
                     "logo": "/img/workplace/Skidasvaedin-Logo.png",
                     "title": "Area Manager",
                     "year": "2022-2023",
+                    "description": "Add text",
+                    "Skills": [
+                        {
+                            "name": "Welding",
+                            "icon": "[Link]",
+                            "description": "Add text"
+                        },
+                        {
+                            "name": "Management",
+                            "icon": "[Link]",
+                            "description": "Add text"
+                        }
+                    ]
+                },
+                {
+                    "workplace": "Skíðasvæðin",
+                    "logo": "/img/workplace/Skidasvaedin-Logo.png",
+                    "title": "Area Manager",
+                    "year": "2024-2025",
+                    "description": "Add text",
+                    "Skills": [
+                        {
+                            "name": "Welding",
+                            "icon": "[Link]",
+                            "description": "Add text"
+                        },
+                        {
+                            "name": "Management",
+                            "icon": "[Link]",
+                            "description": "Add text"
+                        }
+                    ]
+                },
+                {
+                    "workplace": "Skíðasvæðin",
+                    "logo": "/img/workplace/Skidasvaedin-Logo.png",
+                    "title": "Area Manager",
+                    "year": "2025-2026",
                     "description": "Add text",
                     "Skills": [
                         {
@@ -387,11 +428,11 @@
                     ]
                 },
                 {
-                    "workplace": "The Enviromental Agancy of Iceland",
+                    "workplace": "The Enviromental Agency of Iceland",
                     "logo": "/img/workplace/ust.png",
                     "title": "Volcano Ranger",
                     "year": "2021-2023",
-                    "description": "Worked as a ranger at the active volcanic area on hte reykjanes panisula",
+                    "description": "Worked as a ranger at the active volcanic area on the Reykjanes panisula",
                     "Skills": [
                         {
                             "name": "People Management",
@@ -443,7 +484,26 @@
                     "workplace": "Útivist",
                     "logo": "/img/workplace/utivist.webp",
                     "title": "Hut Warden",
-                    "year": "2024-2024",
+                    "year": "2024-2025",
+                    "description": "Working as a hut warden in Básar í Þórsmörk",
+                    "Skills": [
+                        {
+                            "name": "Welding",
+                            "icon": "[Link]",
+                            "description": "Add text"
+                        },
+                        {
+                            "name": "Management",
+                            "icon": "[Link]",
+                            "description": "Add text"
+                        }
+                    ]
+                },
+                {
+                    "workplace": "Útivist",
+                    "logo": "/img/workplace/utivist.webp",
+                    "title": "Ranger",
+                    "year": "2024-2025",
                     "description": "Working as a hut warden in Básar í Þórsmörk",
                     "Skills": [
                         {
@@ -563,6 +623,9 @@
                     "link": "[Link]"
                 }
             ],
+            "figma": {
+                "link": "https://www.figma.com/design/FMELiZbiZljORBJO4NCz4y/L300---Master?t=I2uthI2oRwZ7WZ1Y-0"
+            },
             "prints": [
                 {
                     "name": "",

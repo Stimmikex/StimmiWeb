@@ -3,7 +3,7 @@ import styles from './Team.module.scss'; // Import the Sass module
 
 const Team = ({ team }) => {
     return (
-        <div>
+        <div className={styles.teamContainer}>
             <p>Team:</p>
             {team?.map((member) => (
                 <div className={styles.teamMember} key={member.name}>
