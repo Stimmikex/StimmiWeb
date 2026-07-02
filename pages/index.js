@@ -9,7 +9,7 @@ export default function Home({ projects, user, learned, workspaces, workplaces }
         <Cv user={user} learned={learned} ></Cv>
         <WorkplaceList workplaces={workplaces}></WorkplaceList>
         {/* <ProjectList projects={projects} user={user}></ProjectList> */}
-        {/* <WorkspaceList workspaces={workspaces}></WorkspaceList> */}
+        <WorkspaceList workspaces={workspaces}></WorkspaceList>
       </main>
   )
 }

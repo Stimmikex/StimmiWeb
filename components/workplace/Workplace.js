@@ -2,44 +2,36 @@ import WorkplaceStyle from './Workplace.module.scss';
 
 const Workplace = ({ workplace }) => {
 
-    // ---- GROUP JOBS BY workplace NAME ----
     const groupedJobs = workplace.job.reduce((groups, job) => {
-        const key = job.workplace; // string
+        const key = job.workplace;
         if (!groups[key]) groups[key] = [];
         groups[key].push(job);
         return groups;
     }, {});
 
-    // Convert back into an array so we can map it
     const groupedJobEntries = Object.entries(groupedJobs);
 
     return (
         <div className={WorkplaceStyle.workplace}>
 
             <h2>{workplace.name}</h2>
-            
-            {/* JOB TIMELINE */}
+
             <div className={WorkplaceStyle.workplace__job}>
                 <p className={WorkplaceStyle.sectionTitle}>Jobs</p>
 
                 {groupedJobEntries.map(([placeName, jobs], groupIndex) => (
                     <div key={groupIndex} className={WorkplaceStyle.workplaceGroup}>
                         
-                        {/* Group Title */}
                         <h3 className={WorkplaceStyle.groupTitle}>{placeName}</h3>
 
                         <div className={WorkplaceStyle.timeline}>
                             {jobs.map((job, index) => (
-                                
-                                /* ▼▼▼ ADDED zig-zag alternating class ▼▼▼ */
                                 <div
                                     key={index}
                                     className={`${WorkplaceStyle.timelineItem} ${
                                         index % 2 === 0 ? WorkplaceStyle.left : WorkplaceStyle.right
                                     }`}
                                 >
-                                    {/* ▲▲▲ ONLY THIS LINE CHANGED ▲▲▲ */}
-
                                     <div className={WorkplaceStyle.marker}>
                                         <span className={WorkplaceStyle.dot}></span>
                                         {index !== jobs.length - 1 && (
@@ -54,8 +46,15 @@ const Workplace = ({ workplace }) => {
                                             <p className={WorkplaceStyle.jobYear}>{job.year}</p>
                                             <p>{job.description}</p>
                                         </div>
+                                        <div>
+                                            {job.Skills.map((skill, index) => (
+                                                    <div key={index}>
+                                                        <p>{skill.name}</p>
+                                                        <p>{skill.description}</p>
+                                                    </div>
+                                            ))}
+                                        </div>
                                     </div>
-
                                 </div>
                             ))}
                         </div>

@@ -1,184 +1,249 @@
-/* --------------------------------------------- */
-/* WAVY MOTION ANIMATION */
-/* --------------------------------------------- */
-@keyframes wavyLine {
-    0% {
-        transform: translateX(-50%) scaleY(1);
-        filter: drop-shadow(0 0 .1em rgba(0,0,0,0.1));
-    }
-    50% {
-        transform: translateX(-50%) scaleY(1.05);
-        filter: drop-shadow(0 .1em .2em rgba(0,0,0,0.15));
-    }
-    100% {
-        transform: translateX(-50%) scaleY(1);
-        filter: drop-shadow(0 0 .1em rgba(0,0,0,0.1));
-    }
-}
+/* Workplace.module.scss */
 
 .workplace {
-    font-family: "REM", sans-serif;
-    display: grid;
-    grid-template-columns: 20% 60% 20%;
-    min-height: 100vh;
-    overflow: hidden;
-    padding: 2em;
-    
-
-    .sectionTitle {
-        font-size: 1.4em;
-        margin-bottom: 1em;
-        font-weight: 600;
+    padding: 3rem 1rem;
+    font-family: inherit;
+  
+    h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      color: #222;
     }
-
-    /* --------------------------------------------- */
-    /*  TIMELINE GROUP */
-    /* --------------------------------------------- */
-    .workplaceGroup {
-        margin-bottom: 4em;
-
-        .groupTitle {
-            font-size: 1.6em;
-            margin-bottom: 1.5em;
-            font-weight: 700;
-        }
+  }
+  
+  /* --- JOB TIMELINE SECTION --- */
+  .sectionTitle {
+    text-align: center;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #888;
+    margin-bottom: 2rem;
+  }
+  
+  .workplaceGroup {
+    margin-bottom: 5rem;
+  }
+  
+  .groupTitle {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #444;
+    margin-bottom: 3rem;
+  }
+  
+  .timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  /* --- THE ZIG-ZAG LAYOUT --- */
+  .timelineItem {
+    position: relative;
+    width: 100%;
+    margin-bottom: 3rem; 
+    display: flex;
+    align-items: flex-start;
+  
+    /* The Progress Tracker Interaction */
+    &:hover {
+      .dot {
+        background-color: #0070f3; /* Your theme's active color */
+        transform: scale(1.4);
+        box-shadow: 0 0 12px rgba(0, 112, 243, 0.4);
+      }
+      .content {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+        border-color: #0070f3;
+      }
     }
-
-    /* --------------------------------------------- */
-    /*  ORGANIC TIMELINE BASE */
-    /* --------------------------------------------- */
-    .timeline {
-        position: relative;
-        margin: 0 auto;
-        width: 90%;
-        display: grid;
-        gap: 4em;
-    }
-
-    /* main timeline connecting spine */
-    .timeline::before {
-        content: "";
-        position: absolute;
-        left: 50%;
-        top: 0;
-        width: .25em;
-        height: 100%;
-        background: #9993;
-        border-radius: 1em;
-        transform: translateX(-50%);
-    }
-
-    /* --------------------------------------------- */
-    /*  TIMELINE ITEM */
-    /* --------------------------------------------- */
-    .timelineItem {
-        position: relative;
-        width: 100%;
-        display: flex;
-        gap: 1.5em;
-        align-items: flex-start;
-    }
-
-    /* push left / right content */
-    .left {
-        justify-content: flex-start;
-
-        .content {
-            text-align: right;
-            margin-left: auto;
-        }
-    }
-
-    .right {
-        justify-content: flex-end;
-
-        .content {
-            text-align: left;
-            margin-right: auto;
-        }
-    }
-
-    /* --------------------------------------------- */
-    /*  DOT + ORGANIC CURVED LINE */
-    /* --------------------------------------------- */
-    .marker {
-        position: relative;
-        width: 1em;
-        height: 1em;
-        flex-shrink: 0;
-    }
-
-    .dot {
-        width: 1em;
-        height: 1em;
-        background: #444;
-        border-radius: 50%;
-        border: .25em solid #fff;
-        box-shadow: 0 0 .4em #0003;
-        position: relative;
-        z-index: 2;
-    }
-
-    /* Curved organic connector */
-    .line {
-        position: absolute;
-        top: 1em;
-        left: 50%;
-        width: .25em;
-        height: 4em;
-        transform: translateX(-50%);
-        background: none;
-    
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='64'%3E%3Cpath d='M2 0 C -4 16, 8 32, 2 64' stroke='%23999' stroke-width='2' fill='none' stroke-linecap='round' /%3E%3C/svg%3E");
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
-    
-        /* 🌊 wavy animation */
-        animation: wavyLine 3s ease-in-out infinite;
-        transform-origin: center top;
-    }
-
-    /* --------------------------------------------- */
-    /*  CONTENT BOXES */
-    /* --------------------------------------------- */
+  }
+  
+  /* Pushing content to left or right */
+  .left {
+    justify-content: flex-start;
     .content {
-        background: #f7f7f7;
-        padding: 1.5em;
-        border-radius: 1em;
-        max-width: 22em;
-        box-shadow: 0 .3em .8em #0002;
-        display: flex;
-        gap: 1em;
-        align-items: flex-start;
-
-        img {
-            width: 4em;
-            height: 4em;
-            object-fit: contain;
-        }
-
-        .jobTitle {
-            font-size: 1.2em;
-            font-weight: 600;
-        }
-
-        .jobYear {
-            font-size: 1em;
-            opacity: .6;
-            margin-bottom: .5em;
-        }
+      width: 45%; 
+      /* Leaves 10% in the middle for the center line */
     }
-
-    /* --------------------------------------------- */
-    /*  CERTIFICATIONS */
-    /* --------------------------------------------- */
-    .workplace__cert img {
-        width: 6em;
+  }
+  
+  .right {
+    justify-content: flex-end;
+    .content {
+      width: 45%; 
     }
-
-    ul {
-        display: flex;
-        flex-direction: column;
-        gap: 1em;
+  }
+  
+  /* --- THE CENTER MARKER & LINE --- */
+  .marker {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    height: 100%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 5;
+  }
+  
+  .dot {
+    width: 20px;
+    height: 20px;
+    background-color: #d1d5db;
+    border: 4px solid #ffffff;
+    border-radius: 50%;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    z-index: 2;
+    margin-top: 5px; /* Aligns dot with the top of the content card */
+  }
+  
+  .line {
+    width: 3px;
+    background-color: #e5e7eb;
+    position: absolute;
+    top: 25px; /* Starts right below the dot */
+    bottom: -3rem; /* Stretches down to connect to the next item */
+    z-index: 1;
+  }
+  
+  /* --- CONTENT CARD STYLING --- */
+  .content {
+    background: #ffffff;
+    padding: 1.5rem 2rem;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    
+    img {
+      max-width: 60px;
+      margin-bottom: 1rem;
+      border-radius: 8px;
     }
-}
+  }
+  
+  .jobTitle {
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: #111;
+    margin: 0 0 0.25rem 0;
+  }
+  
+  .jobYear {
+    color: #6b7280;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin: 0 0 1rem 0;
+  }
+  
+  /* --- CERTIFICATIONS SECTION --- */
+  .workplace__cert {
+    margin-top: 5rem;
+    text-align: center;
+  }
+  
+  .certList {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+    padding: 0;
+    
+    .certItem {
+      background: #f9fafb;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      border: 1px solid #e5e7eb;
+      
+      img {
+        max-width: 80px;
+        margin-top: 1rem;
+      }
+    }
+  }
+
+  .workplaceContainer {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+  
+  .mainTitle {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #222;
+  }
+  
+  /* --- DROPDOWN WIDGET STYLES --- */
+  .dropdownItem {
+    margin-bottom: 1.5rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    overflow: hidden; /* Keeps the corners rounded when content expands */
+    background: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+  
+  .dropdownHeader {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    background: #f9fafb;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.2s ease;
+  
+    h3 {
+      margin: 0;
+      font-size: 1.5rem;
+      color: #111;
+      font-weight: 700;
+    }
+  
+    .arrow {
+      font-size: 1.2rem;
+      color: #6b7280;
+      transition: transform 0.3s ease;
+    }
+  
+    &:hover {
+      background: #f3f4f6;
+    }
+  }
+  
+  /* Active state when the dropdown is open */
+  .activeHeader {
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    
+    .arrow {
+      color: #0070f3; /* Highlights the arrow when open */
+    }
+  }
+  
+  /* Smooth fade-in and slide-down for the content */
+  .dropdownContent {
+    animation: slideDown 0.3s ease-out forwards;
+    transform-origin: top;
+  }
+  
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: scaleY(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scaleY(1);
+    }
+  }

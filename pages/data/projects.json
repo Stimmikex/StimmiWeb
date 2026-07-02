@@ -273,7 +273,7 @@
     ],
     "Workplaces": [
         {
-            "name": "Skiing",
+            "name": "Ski Resorts",
             "background": "[Link]",
             "cert": [
                 {
@@ -370,10 +370,10 @@
                     "logo": "/img/workplace/Skidasvaedin-Logo.png",
                     "title": "Area Manager",
                     "year": "2025-2026",
-                    "description": "Add text",
+                    "description": "Area manager of the cross-country ski area. Main focus on laying tracks with sled. General communitcation with the public about opening times and info regarding events",
                     "Skills": [
                         {
-                            "name": "Welding",
+                            "name": "Track laying",
                             "icon": "[Link]",
                             "description": "Add text"
                         },
@@ -387,7 +387,7 @@
             ]
         },
         {
-            "name": "Hálendið",
+            "name": "Ranger",
             "background": "[Link]",
             "cert": [
                 {
