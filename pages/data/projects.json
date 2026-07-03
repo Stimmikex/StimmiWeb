@@ -297,12 +297,12 @@
                     "Skills": [
                         {
                             "name": "First aid",
-                            "icon": "[Link]",
+                            "icon": "/img/workplace/skills/firstaid.png",
                             "description": "Developed a good foundation of first aid at Panorama with the course Outdoor Emergancy Care or OEC for short"
                         },
                         {
                             "name": "Tobogan",
-                            "icon": "[Link]",
+                            "icon": "/img/workplace/skills/toboggan.png",
                             "description": "Add text"
                         }
                     ]
@@ -316,13 +316,13 @@
                     "Skills": [
                         {
                             "name": "Lift Maintainance",
-                            "icon": "[Link]",
+                            "icon": "/img/workplace/skills/lift.png",
                             "description": "Helping with the lift maintainance for the ski resort"
 
                         },
                         {
                             "name": "Tobogan",
-                            "icon": "[Link]",
+                            "icon": "/img/workplace/skills/toboggan.png",
                             "description": "Add text"
                         }
                     ]

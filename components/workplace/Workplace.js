@@ -51,6 +51,7 @@ const Workplace = ({ workplace }) => {
                                                     <div key={index}>
                                                         <p>{skill.name}</p>
                                                         <p>{skill.description}</p>
+                                                        <img src={skill.icon} />
                                                     </div>
                                             ))}
                                         </div>
