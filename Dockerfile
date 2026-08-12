@@ -8,4 +8,4 @@ ENV NODE_ENV=production
 EXPOSE 3000
 RUN chown -R node:node /usr/src/app
 USER node
-CMD ["npm", "run", "dev"]
+CMD ["npm", "run", "start"]
