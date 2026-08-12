@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import WorkspaceStyle from './WorkSpace.module.scss';
+import WorkspaceStyle from './Workspace.module.scss';
 
 const WorkspaceList = ({ workspaces }) => {
     return (

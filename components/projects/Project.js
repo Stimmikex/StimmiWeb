@@ -1,5 +1,5 @@
 import Styles from "./Styles.module.scss";
-import { server } from "../../pages/config/index.js"
+import { server } from "../../config/index.js"
 
 const Project = ({ project }) => {
     return (

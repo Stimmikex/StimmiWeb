@@ -1,7 +1,7 @@
 import { useState } from "react";
 import cvStyles from "./Cv.module.scss";
 import School from "../school/School.js";
-import { server } from "../../pages/config/index.js";
+import { server } from "../../config/index.js";
 import TagsSelected from "../school/projects/TagsSelected";
 
 const Cv = ({ user, learned }) => {

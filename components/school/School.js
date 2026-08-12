@@ -1,6 +1,6 @@
 import cvStyles from "../cv/Cv.module.scss"
 import schoolStyle from "./School.module.scss"
-import { server } from "../../pages/config/index.js"
+import { server } from "../../config/index.js"
 import Teaching from "./teaching/Teaching"
 import StudentGroups from "./student_groups/StudentGroups"
 import Projects from "./projects/Projects"
